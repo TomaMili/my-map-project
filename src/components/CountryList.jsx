@@ -2,8 +2,11 @@ import CountryItem from "./CountryItem";
 import Message from "./Message";
 import Spinner from "./Spinner";
 import styles from "./CountryList.module.css";
+import { UseCities } from "../contexts/CitiesContext";
 
-function CountryList({ isLoading, cities }) {
+function CountryList() {
+  const { cities, isLoading } = UseCities();
+
   if (isLoading) return <Spinner />;
   if (!cities.length)
     return <Message message="You haven't visited any countries" />;
