@@ -13,18 +13,6 @@
       "id": "73930385"
     },
     {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
-    },
-    {
       "cityName": "Berlin",
       "country": "Germany",
       "emoji": "🇩🇪",
@@ -46,6 +34,30 @@
       "position": {
         "lat": "43.197167282501276",
         "lng": "17.797851562500004"
+      }
+    },
+    {
+      "id": "c850",
+      "cityName": "Niedernhall",
+      "country": "Germany",
+      "emoji": "🇩🇪",
+      "date": "2024-12-09T22:52:12.321Z",
+      "notes": "ghj",
+      "position": {
+        "lat": "49.26780455063753",
+        "lng": "9.602050781250002"
+      }
+    },
+    {
+      "id": "837c",
+      "cityName": "Bijelo Polje",
+      "country": "Montenegro",
+      "emoji": "🇲🇪",
+      "date": "2024-12-09T22:55:11.038Z",
+      "notes": "ik",
+      "position": {
+        "lat": "43.02071359427862",
+        "lng": "19.643554687500004"
       }
     }
   ]
