@@ -1,4 +1,4 @@
-import { createContext, useEffect, useContext, useReducer } from "react";
+import { createContext, useEffect, useContext, useReducer, useCallback } from "react";
 
 const BASE_URL = "http://localhost:9000";
 
@@ -18,7 +18,7 @@ function reducer(state, action) {
     case "cities/loaded":
       return { ...state, cities: action.payload, isLoading: false };
     case "city/loaded":
-      return { ...state, currentCity: action.payload };
+      return { ...state, currentCity: action.payload, isLoading:false };
     case "city/created":
       return {
         ...state,
@@ -66,7 +66,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCity(id) {
+  const getCity = useCallback( async function getCity(id) {
     if (Number(id) === currentCity.id) return;
 
     dispatch({ type: "loading" });
@@ -80,7 +80,7 @@ function CitiesProvider({ children }) {
         payload: "There was an error loading the city",
       });
     }
-  }
+  }, [currentCity.id])
   async function createCity(newCity) {
     dispatch({ type: "loading" });
     try {

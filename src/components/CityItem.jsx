@@ -10,8 +10,8 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function CityItem({ city }) {
-  const { cityName, emoji, date, id, position } = city;
   const { currentCity, deleteCity } = UseCities();
+  const { cityName, emoji, date, id, position } = city;
 
   function handleClick(e) {
     e.preventDefault();
